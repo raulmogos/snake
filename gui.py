@@ -4,7 +4,7 @@ from random import randint
 pygame.init()
 
 # square sizes = 10 x 10
-length = 20
+length = 18
 no_squares = {
     'height': 30,
     'width': 50
@@ -13,14 +13,14 @@ square_width, square_height = length, length
 margin = 1
 
 # window set up
-width = (no_squares['width'] * length) + (margin * no_squares['width'])
-height = (no_squares['height'] * length) + (margin * no_squares['height'])
+width = (no_squares['width'] * length) + (margin * no_squares['width'] - margin)
+height = (no_squares['height'] * length) + (margin * no_squares['height'] - margin)
 size = width, height
 screen = pygame.display.set_mode(size)
 pygame.display.set_caption('snake')
 
 # clock
-DELAY = 100
+DELAY = 150
 
 # colors
 GREEN = (22, 111, 77)
